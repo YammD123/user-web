@@ -3,6 +3,7 @@ import Container from "./ui/container";
 import Link from "next/link";
 import MainNavbar from "./main-nav";
 import getCategories from "@/actions/get-categories";
+import { UserButton, UserProfile } from "@clerk/nextjs";
 
 export const revalidate = 0
 
@@ -18,6 +19,7 @@ export default async function Navbar() {
             <p className="font-bold text-2xl">TOKO</p>
           </Link>
           <MainNavbar data={categories} />
+      <UserButton/>
         </div>
       </Container>
     </div>
